@@ -1,3 +1,4 @@
 baseURL = "https://chachachacha.netlify.com/"
 languageCode = "ja"
 title = "chachamame site"
+theme = "story"
