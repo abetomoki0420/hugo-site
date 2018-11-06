@@ -1,8 +1,14 @@
 ---
-title: BBBBBBBB
+title: GoogleAppsScript (GAS)を使って固定ツイートを更新してみる
 date: 2018-11-06T06:34:32.029Z
-description: aaaaaaaa
+description:  GoogleAppsScript (GAS)を使って固定ツイートを更新してみる
 image: /images/uploads/icon.jpg
 ---
-aaaaaaaaa
 
+Twitterの固定ツイートをAPI経由で設定しようとしたが、そのためのAPIは公開されていないので、別のアプローチを考案した。
+
+Twitterの検索窓から特定のハッシュタグで検索を行った時に固定ツイートを検索結果の上位に表示させるために、ハッシュタグを仕込んだツイートを対象の固定ツイートに定期的にリプライ＆削除を行うことにした。
+
+GoogleAppsScriptからTwitterAPIを利用しツイートを行う。
+ツイートIDをレスポンスとして受け取れるので、GoogleSpreadSheatに保存する。
+指定した時間になったら、保存していたツイートIDに該当するツイートを削除し、そして同じ内容で再びツイートを行う。
